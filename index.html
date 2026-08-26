@@ -1,1 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Fun Facts</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+        }
+        h1 {
+            color: #2c3e50;
+            font-size: 24px;
+        }
+        p {
+            font-size: 18px;
+            color: #555;
+            min-height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1>✨ Random Fun Fact ✨</h1>
+        <p id="fact">Click the button below to generate a fun fact!</p>
+        <button onclick="generateFact()">Get New Fact</button>
+    </div>
+
+    <script>
+        const facts = [
+            "Honey never spoils; archaeologists have found 3,000-year-old honey that is still edible!",
+            "Bananas are curved because they grow towards the sun against gravity.",
+            "Octopuses have three hearts and blue blood.",
+            "A day on Venus is longer than a year on Venus.",
+            "Continuous learning and skill-building open up unlimited future opportunities!"
+        ];
+
+        function generateFact() {
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            document.getElementById("fact").innerText = facts[randomIndex];
+        }
+    </script>
+
+</body>
+</html>
 
